@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "a a a"
+    "b c d"
+    ;
+}
+
+div{
+    border: 2px solid red;
+    background-color: aqua;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: a;
+}
+
+.leftsidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: b;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: c;
+}
+
+.rightsidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: d;
+}
+
+h2::first-letter{
+    font-size: large;
+    color: crimson;
+    font-size: 200px;
+}
+
+h2::selection{
+    background-color: white;
+}
+
+h1{
+    text-align: center;
+    background-color: darkgreen;
+    width: 800px;
+    height:50px;
+    overflow:hidden;
+    float:left;
+   -webkit-transition: 0.5s ease-in;  
+  -moz-transition: 0.5s ease-in;  
+  -o-transition: 0.5s ease-in;  
+  transition: 0.5s ease-in;
+}
+
+h1:hover{
+    color: white;
+    -webkit-transition: 2s ease-in;  
+    -moz-transition: 2s ease-in;  
+    -o-transition: 2s ease-in;  
+    transition: 2s ease-in;  
+    text-indent: -300px;    
+}
+
+h1::after{
+    content: "😊";
+}
+
+
+p{
+    margin-left: 20px;
+}
+
+p::after{
+    content: "(╯°□°）╯︵ ┻━┻)";
+    padding: 5px;
+}
+
+p::selection{
+    background-color: red;
+}
+
+p:hover{
+    font-size: 30px;
+}
+
+input:required{
+    border: 10px solid red;
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
